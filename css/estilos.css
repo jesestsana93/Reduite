@@ -1,0 +1,365 @@
+/*------------------------------
+1. TIPOGRAFIA DEL SITIO
+--------------------------------*/
+@font-face {
+  font-family: "Muli ExtraBold";
+  src: url("../fonts/Muli-ExtraBold.ttf"); }
+@font-face {
+  font-family: "Muli Regular";
+  src: url("../fonts/Muli-Regular.ttf"); }
+@font-face {
+  font-family: "Muli Light";
+  src: url("../fonts/Muli-Light.ttf"); }
+html {
+  font-size: 14px; }
+
+/*------------------------------
+2. ESTILOS GENERALES
+--------------------------------*/
+/*PALETA DE COLORES USADA*/
+/*Estilos para headers y texto*/
+.titulo-Regular {
+  font-size: 2rem;
+  font-family: Muli Regular; }
+
+.titulo-ExtraBold {
+  font-size: 2rem;
+  font-family: Muli ExtraBold; }
+
+.texto {
+  font-size: 1.3rem;
+  font-family: Muli Light; }
+
+/*Estilos para el boton*/
+.btn {
+  border: none;
+  border-radius: 0;
+  font-family: Muli ExtraBold;
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  margin-top: 5rem; }
+  .btn:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-color: transparent; }
+
+.btn-primary {
+  color: #8DFFF4;
+  background-color: #242D63;
+  border-color: transparent;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease; }
+  .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:focus {
+    color: #242D63;
+    background-color: #8DFFF4; }
+
+/*------------------------------
+3. INICIO
+--------------------------------*/
+#inicio {
+  background-image: url(../images/logra-tus-objetivos-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /*----Barra de navegacion----*/
+  /*Boton del menu */
+  /*Animacion de la fecha*/ }
+  #inicio .navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030; }
+  #inicio .menu-pleca {
+    background-image: url(../images/svg/menu-pleca.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*Estilos para el logotipo*/ }
+    #inicio .menu-pleca .logo {
+      width: 14rem;
+      height: 4rem;
+      margin-left: 0; }
+  #inicio .navbar-light .navbar-toggler {
+    border-color: transparent; }
+  #inicio .navbar-light .navbar-nav .nav-link {
+    background-image: url(../images/menu-mobile.jpg);
+    background-size: cover;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Muli ExtraBold";
+    color: #848484;
+    padding: 2rem;
+    border-bottom: 1px solid white; }
+    #inicio .navbar-light .navbar-nav .nav-link .tel {
+      width: 15rem; }
+    #inicio .navbar-light .navbar-nav .nav-link .face {
+      width: 1rem; }
+    #inicio .navbar-light .navbar-nav .nav-link .insta {
+      width: 1rem; }
+    #inicio .navbar-light .navbar-nav .nav-link.active {
+      color: #242D63;
+      font-family: "Muli ExtraBold"; }
+  #inicio .boton-menu:before {
+    content: "\f0c9";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #1E1E1E;
+    font-size: 1.5rem; }
+    #inicio .boton-menu:before:focus, #inicio .boton-menu:before:active {
+      outline: none; }
+  #inicio .icono-cerrar:before {
+    content: "\f00d";
+    position: relative;
+    left: .2rem;
+    font-size: 1.5rem; }
+  #inicio .texto-encabezado {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    #inicio .texto-encabezado .container {
+      padding: 3rem 2rem 0 2rem; }
+  #inicio .scroll {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    #inicio .scroll a {
+      width: 2.5rem;
+      margin: 1rem 0 3rem 0;
+      -webkit-animation: flecha-animada 2s ease-in-out infinite;
+              animation: flecha-animada 2s ease-in-out infinite; }
+@-webkit-keyframes flecha-animada {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+@keyframes flecha-animada {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+/*------------------------------
+4. QUE ES REDUITE
+--------------------------------*/
+#que-es-reduite {
+  background-color: #1E1E1E; }
+  #que-es-reduite h1,
+  #que-es-reduite p {
+    color: #ACB3DF; }
+  #que-es-reduite .blanco {
+    background-color: white;
+    color: #242D63; }
+  #que-es-reduite .servicios img {
+    width: 12rem;
+    margin: 0 auto; }
+  #que-es-reduite .servicios .tam {
+    width: 9rem !important; }
+
+/*------------------------------
+5. CONTACTO
+--------------------------------*/
+#contacto {
+  background-image: url(../images/unete-al-reto-mobile.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: auto; }
+  #contacto .form-control {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+    border: 1px solid #4D4D4D;
+    border-radius: unset; }
+    #contacto .form-control:focus {
+      -webkit-box-shadow: 0 0 transparent;
+              box-shadow: 0 0 transparent;
+      outline: #4D4D4D; }
+  #contacto ::-webkit-input-placeholder {
+    font-family: "Muli Light" !important;
+    color: black;
+    padding: .3rem .2rem;
+    font-size: 1rem; }
+  #contacto :-ms-input-placeholder {
+    font-family: "Muli Light" !important;
+    color: black;
+    padding: .3rem .2rem;
+    font-size: 1rem; }
+  #contacto ::-ms-input-placeholder {
+    font-family: "Muli Light" !important;
+    color: black;
+    padding: .3rem .2rem;
+    font-size: 1rem; }
+  #contacto ::placeholder {
+    font-family: "Muli Light" !important;
+    color: black;
+    padding: .3rem .2rem;
+    font-size: 1rem; }
+  #contacto input[type=text],
+  #contacto input[type=email] {
+    color: black; }
+  #contacto .direccion span {
+    font-size: 1.3rem;
+    color: #4D4D4D; }
+
+/* =============================================
+X. Show de las Medias Queries
+============================================= */
+@media (min-width: 320px) {
+  #inicio {
+    /*Boton del menu */ }
+    #inicio .menu-pleca {
+      /*Estilos para el logotipo*/ }
+      #inicio .menu-pleca .logo {
+        width: 16rem;
+        height: 6rem;
+        margin-left: .4rem; }
+    #inicio .boton-menu:before,
+    #inicio .icono-cerrar:before {
+      font-size: 2rem; } }
+@media (min-width: 400px) {
+  #inicio {
+    /*Boton del menu */ }
+    #inicio .menu-pleca {
+      /*Estilos para el logotipo*/ }
+      #inicio .menu-pleca .logo {
+        width: 21rem;
+        height: 5rem;
+        margin-left: 1rem; }
+    #inicio .boton-menu:before,
+    #inicio .icono-cerrar:before {
+      font-size: 2rem; } }
+/* --------------Vista sm ------------- */
+@media (min-width: 576px) {
+  /*Estilo general del boton*/
+  .btn {
+    width: auto;
+    padding: .4rem 1rem;
+    font-size: 1rem;
+    margin-top: 0rem; }
+
+  #inicio {
+    background-image: url(../images/logra-tus-objetivos-desktop.jpg);
+    /*Boton del menu */ }
+    #inicio .menu-pleca {
+      /*Estilos para el logotipo*/ }
+      #inicio .menu-pleca .logo {
+        width: 26rem;
+        height: 8rem;
+        margin-left: 2rem; }
+    #inicio .boton-menu:before,
+    #inicio .icono-cerrar:before {
+      font-size: 3rem; }
+    #inicio .texto-encabezado .container {
+      padding: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    #inicio .texto-encabezado h1, #inicio .texto-encabezado h2 {
+      color: #4D4D4D; }
+
+  #contacto .direccion p,
+  #contacto .direccion span {
+    font-size: 1rem; } }
+/* --------------Vista Md ------------- */
+@media (min-width: 768px) {
+  html {
+    font-size: 16px; }
+
+  #inicio .texto-encabezado h1,
+  #inicio .texto-encabezado h2 {
+    font-size: 1.4rem; }
+  #inicio .scroll a {
+    width: 2rem; }
+
+  #contacto .form-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  #contacto .direccion p {
+    line-height: 1; }
+  #contacto .direccion p,
+  #contacto .direccion span {
+    font-size: .8rem; } }
+/* --------------Vista Lg ------------- */
+@media (min-width: 992px) {
+  #inicio .navbar {
+    padding: 0; }
+  #inicio .menu-pleca .logo {
+    width: 15rem;
+    height: 6rem;
+    margin-left: 0; }
+  #inicio .scroll a {
+    margin: 1rem 0 4rem 0; }
+  #inicio .navbar-light .navbar-nav .nav-link {
+    background: transparent;
+    border-bottom: 0;
+    font-size: .8rem;
+    padding: 0 1.1rem;
+    font-family: "Muli Light"; }
+    #inicio .navbar-light .navbar-nav .nav-link .tel {
+      width: 8rem; }
+    #inicio .navbar-light .navbar-nav .nav-link .face {
+      width: .5rem;
+      padding: 0;
+      margin: 0; }
+    #inicio .navbar-light .navbar-nav .nav-link .insta {
+      width: .84rem;
+      padding: 0;
+      margin: 0; }
+
+  #contacto {
+    background-image: url(../images/unete-al-reto-desktop.jpg); }
+    #contacto h3, #contacto p {
+      color: #4D4D4D;
+      font-size: 1.5rem; } }
+/* --------------Vista Xl ------------- */
+@media (min-width: 1200px) {
+  html {
+    font-size: 18px; }
+
+  #inicio .texto-encabezado h1,
+  #inicio .texto-encabezado h2 {
+    font-size: 1.2rem;
+    line-height: 1; }
+  #inicio .scroll a {
+    width: 1.6rem;
+    margin: 1rem 0 2.5rem 0; }
+
+  #contacto .direccion p,
+  #contacto .direccion span {
+    font-size: .7rem; } }
+
+/*# sourceMappingURL=estilos.css.map */
