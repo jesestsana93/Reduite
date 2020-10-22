@@ -16,10 +16,26 @@ $(function () {
         $('#menu-navegacion .navbar-collapse').collapse('hide');
     });
 
+    /*-----------------------------------------
+    2. CABECERA ANIMADA QUE CAMBIA DE COLOR
+   --------------------------------------------
+    $(window).scroll(function () {
 
-    /*-----------------------------------------------------------
-    4. CONFIGURACION DE SLICK PARA LA PARTE DE ALGUNOS DE NUESTROS CLIENTES
-    ------------------------------------------------------------*/
+        var windowHeight = $(window).height(); //altura de la ventana
+
+        var nav = $('.encabezado');
+        var scroll = $(window).scrollTop();
+        if (scroll >= windowHeight) {
+            nav.addClass("fondo-menu");
+        } else{
+            nav.removeClass("fondo-menu");
+        }
+    });
+   */
+
+    /*-----------------------------------------------------------------------
+    2. CONFIGURACION DE SLICK PARA LA PARTE DE ALGUNOS DE NUESTROS CLIENTES
+    -------------------------------------------------------------------------*/
     $('.servicios').slick({
         dots: false,
         infinite: true,
@@ -30,49 +46,43 @@ $(function () {
         autoplay: true,
         autoplaySpeed: 500,
         responsive: [{
-            //Vista lg >=992px
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false
+                //Vista lg >=992px
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                //Vista md >=768px
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                //Vista sm >=576px
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    prevArrow: '<button type="button" class="slick-prev"></button>',
+                    nextArrow: '<button type="button" class="slick-next"></button>',
+                    infinite: true,
+                    dots: false
+                }
             }
-        },
-        {
-            //Vista md >=768px
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false
-            }
-        },
-        {
-            //Vista sm >=576px
-            breakpoint: 576,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false
-            }
-        }
         ]
     });
 
-
-    /*-----------------------------------------------------------
-    5. INICIANDO "page-scroll-to-id"
-    -------------------------------------------------------------*/
-    $('#menu-principal a').mPageScroll2id({
-        offset: 100,
-        highlightClass: 'active'
-    });
-
     /*------------------------------------------------------------
-    6. INICIANDO WOW.js para las animaciones en la página
+    3. INICIANDO WOW.js para las animaciones en la página
     --------------------------------------------------------------*/
     new WOW().init();
 

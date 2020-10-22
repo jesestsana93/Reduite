@@ -18,6 +18,8 @@
 
 html {
     font-size: 14px;
+    scroll-behavior: smooth;
+    /*comportamiento del scroll*/
 }
 
 /*------------------------------
@@ -68,6 +70,9 @@ $texto-secundario: #4D4D4D;
     color: $terciario;
     background-color: $secundario;
     border-color: transparent;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
     transition: all .6s ease;
 
     &:hover,
@@ -75,6 +80,27 @@ $texto-secundario: #4D4D4D;
     &:focus {
         color: $secundario;
         background-color: $terciario;
+    }
+
+    &:hover {
+        &::before {
+            width: 130%;
+            left: -15%;
+        }
+    }
+
+    /*Efecto de la caja desplazada en el botón*/
+    &:before {
+        content: '';
+        width: 0px;
+        height: 100%;
+        background-color: $terciario;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        z-index: -1;
+        transform: skew(-45deg, 0);
+        transition: all .4s ease;
     }
 }
 
@@ -98,18 +124,27 @@ $texto-secundario: #4D4D4D;
         z-index: 1030;
     }
 
-    .menu-pleca {
+    .encabezado {
         background-image: url(../images/svg/menu-pleca.svg);
         background-size: cover;
         background-repeat: no-repeat;
 
-        /*Estilos para el logotipo*/
-        .logo {
-            width: 14rem;
-            height: 4rem;
-            margin-left: 0;
-        }
     }
+
+    /*Estilos para el logotipo*/
+    .logo {
+        width: 14rem;
+        height: 4rem;
+        margin-left: 0;
+    }
+
+    /*
+    .fondo-menu {
+        background-image: url(../images/svg/menu-pleca-negro-01.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: red;
+    }*/
 
     .navbar-light .navbar-toggler {
         border-color: transparent;
@@ -125,17 +160,27 @@ $texto-secundario: #4D4D4D;
         padding: 2rem;
         border-bottom: 1px solid white;
 
+        &.no-disponible {
+            pointer-events: none;
+        }
+
         .tel {
             width: 15rem;
         }
 
-        .face {
+        .redes {
             width: 1rem;
+            transition: all .5s ease;
+
+            .face {
+                width: 1.2rem;
+            }
+
+            &:hover {
+                transform: scale(1.4);
+            }
         }
 
-        .insta {
-            width: 1rem;
-        }
 
         &.active {
             color: $secundario;
@@ -202,6 +247,7 @@ $texto-secundario: #4D4D4D;
     }
 }
 
+
 /*------------------------------
 4. QUE ES REDUITE
 --------------------------------*/
@@ -229,8 +275,27 @@ $texto-secundario: #4D4D4D;
             width: 9rem !important;
         }
     }
+    .slick-slider{
+        display:flex;
+        align-items: center;
+    }
 
-
+    .slick-prev:before,
+    .slick-next:before {
+        content: "\f053";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        color: $secundario;
+        font-size: 4rem;
+        float: right;
+    }
+    button{
+        border: none;
+        background: transparent;
+    }
+    .slick-next:before {
+        content: "\f054";
+    }
 }
 
 /*------------------------------
@@ -357,7 +422,9 @@ X. Show de las Medias Queries
         }
 
         .texto-encabezado {
-            h1, h2{
+
+            h1,
+            h2 {
                 color: $texto-secundario;
             }
         }
@@ -380,7 +447,8 @@ X. Show de las Medias Queries
     html {
         font-size: 16px;
     }
-    #inicio{
+
+    #inicio {
         .texto-encabezado {
 
             h1,
@@ -388,10 +456,20 @@ X. Show de las Medias Queries
                 font-size: 1.4rem;
             }
         }
+
         .scroll a {
             width: 2rem;
         }
-    } 
+    }
+
+    #que-es-reduite {
+
+        h1,
+        h3,
+        p {
+            font-size: 1.2rem;
+        }
+    }
 
     #contacto {
         .form-group {
@@ -422,11 +500,12 @@ X. Show de las Medias Queries
         }
 
         .menu-pleca .logo {
-                width: 15rem;
-                height: 6rem;
-                margin-left: 0;
+            width: 15rem;
+            height: 6rem;
+            margin-left: 0;
         }
-        .scroll a{
+
+        .scroll a {
             margin: 1rem 0 4rem 0;
         }
 
@@ -442,7 +521,7 @@ X. Show de las Medias Queries
             }
 
             .face {
-                width: .5rem;
+                width: .6rem;
                 padding: 0;
                 margin: 0;
             }
@@ -452,12 +531,23 @@ X. Show de las Medias Queries
                 padding: 0;
                 margin: 0;
             }
-        }         
+        }
+    }
+
+    #que-es-reduite {
+
+        h1,
+        h3,
+        p {
+            font-size: 1.7rem;
+        }
     }
 
     #contacto {
         background-image: url(../images/unete-al-reto-desktop.jpg);
-        h3, p{
+
+        h3,
+        p {
             color: $texto-secundario;
             font-size: 1.5rem;
         }
@@ -470,14 +560,16 @@ X. Show de las Medias Queries
         font-size: 18px;
     }
 
-    #inicio{
-        .texto-encabezado{
+    #inicio {
+        .texto-encabezado {
+
             h1,
             h2 {
                 font-size: 1.2rem;
                 line-height: 1;
             }
         }
+
         .scroll {
             a {
                 width: 1.6rem;
@@ -488,6 +580,7 @@ X. Show de las Medias Queries
 
     #contacto {
         .direccion {
+
             p,
             span {
                 font-size: .7rem;

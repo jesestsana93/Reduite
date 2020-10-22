@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*------------------------------
 1. TIPOGRAFIA DEL SITIO
 --------------------------------*/
@@ -11,7 +12,9 @@
   font-family: "Muli Light";
   src: url("../fonts/Muli-Light.ttf"); }
 html {
-  font-size: 14px; }
+  font-size: 14px;
+  scroll-behavior: smooth;
+  /*comportamiento del scroll*/ }
 
 /*------------------------------
 2. ESTILOS GENERALES
@@ -48,11 +51,31 @@ html {
   color: #8DFFF4;
   background-color: #242D63;
   border-color: transparent;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
   -webkit-transition: all .6s ease;
-  transition: all .6s ease; }
+  transition: all .6s ease;
+  /*Efecto de la caja desplazada en el botón*/ }
   .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:focus {
     color: #242D63;
     background-color: #8DFFF4; }
+  .btn-primary:hover::before {
+    width: 130%;
+    left: -15%; }
+  .btn-primary:before {
+    content: '';
+    width: 0px;
+    height: 100%;
+    background-color: #8DFFF4;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: -1;
+    -webkit-transform: skew(-45deg, 0);
+            transform: skew(-45deg, 0);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease; }
 
 /*------------------------------
 3. INICIO
@@ -71,6 +94,14 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   /*----Barra de navegacion----*/
+  /*Estilos para el logotipo*/
+  /*
+  .fondo-menu {
+      background-image: url(../images/svg/menu-pleca-negro-01.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: red;
+  }*/
   /*Boton del menu */
   /*Animacion de la fecha*/ }
   #inicio .navbar-fixed-top {
@@ -78,15 +109,14 @@ html {
     right: 0;
     left: 0;
     z-index: 1030; }
-  #inicio .menu-pleca {
+  #inicio .encabezado {
     background-image: url(../images/svg/menu-pleca.svg);
     background-size: cover;
-    background-repeat: no-repeat;
-    /*Estilos para el logotipo*/ }
-    #inicio .menu-pleca .logo {
-      width: 14rem;
-      height: 4rem;
-      margin-left: 0; }
+    background-repeat: no-repeat; }
+  #inicio .logo {
+    width: 14rem;
+    height: 4rem;
+    margin-left: 0; }
   #inicio .navbar-light .navbar-toggler {
     border-color: transparent; }
   #inicio .navbar-light .navbar-nav .nav-link {
@@ -98,12 +128,19 @@ html {
     color: #848484;
     padding: 2rem;
     border-bottom: 1px solid white; }
+    #inicio .navbar-light .navbar-nav .nav-link.no-disponible {
+      pointer-events: none; }
     #inicio .navbar-light .navbar-nav .nav-link .tel {
       width: 15rem; }
-    #inicio .navbar-light .navbar-nav .nav-link .face {
-      width: 1rem; }
-    #inicio .navbar-light .navbar-nav .nav-link .insta {
-      width: 1rem; }
+    #inicio .navbar-light .navbar-nav .nav-link .redes {
+      width: 1rem;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease; }
+      #inicio .navbar-light .navbar-nav .nav-link .redes .face {
+        width: 1.2rem; }
+      #inicio .navbar-light .navbar-nav .nav-link .redes:hover {
+        -webkit-transform: scale(1.4);
+                transform: scale(1.4); }
     #inicio .navbar-light .navbar-nav .nav-link.active {
       color: #242D63;
       font-family: "Muli ExtraBold"; }
@@ -180,6 +217,26 @@ html {
     margin: 0 auto; }
   #que-es-reduite .servicios .tam {
     width: 9rem !important; }
+  #que-es-reduite .slick-slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  #que-es-reduite .slick-prev:before,
+  #que-es-reduite .slick-next:before {
+    content: "\f053";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #242D63;
+    font-size: 4rem;
+    float: right; }
+  #que-es-reduite button {
+    border: none;
+    background: transparent; }
+  #que-es-reduite .slick-next:before {
+    content: "\f054"; }
 
 /*------------------------------
 5. CONTACTO
@@ -284,7 +341,8 @@ X. Show de las Medias Queries
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; }
-    #inicio .texto-encabezado h1, #inicio .texto-encabezado h2 {
+    #inicio .texto-encabezado h1,
+    #inicio .texto-encabezado h2 {
       color: #4D4D4D; }
 
   #contacto .direccion p,
@@ -300,6 +358,11 @@ X. Show de las Medias Queries
     font-size: 1.4rem; }
   #inicio .scroll a {
     width: 2rem; }
+
+  #que-es-reduite h1,
+  #que-es-reduite h3,
+  #que-es-reduite p {
+    font-size: 1.2rem; }
 
   #contacto .form-group {
     display: -webkit-box;
@@ -332,7 +395,7 @@ X. Show de las Medias Queries
     #inicio .navbar-light .navbar-nav .nav-link .tel {
       width: 8rem; }
     #inicio .navbar-light .navbar-nav .nav-link .face {
-      width: .5rem;
+      width: .6rem;
       padding: 0;
       margin: 0; }
     #inicio .navbar-light .navbar-nav .nav-link .insta {
@@ -340,9 +403,15 @@ X. Show de las Medias Queries
       padding: 0;
       margin: 0; }
 
+  #que-es-reduite h1,
+  #que-es-reduite h3,
+  #que-es-reduite p {
+    font-size: 1.7rem; }
+
   #contacto {
     background-image: url(../images/unete-al-reto-desktop.jpg); }
-    #contacto h3, #contacto p {
+    #contacto h3,
+    #contacto p {
       color: #4D4D4D;
       font-size: 1.5rem; } }
 /* --------------Vista Xl ------------- */

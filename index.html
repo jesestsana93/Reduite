@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="css/slick.css">
     <!--Add the new slick-theme.css if you want the default styling-->
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <!-- CARGA DE ANIMATE.CSS PARA EL FUNCIONAMIENTO DE ANIMACIONES CON WOW.JS -->
+    <link rel="stylesheet" href="css/animate.css">
     <!-- CARGA DE ESTILOS CSS PERSONALIZADOS -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -34,11 +36,12 @@
     ======================================-->
     <section id="inicio">
         <header class="navbar-fixed-top">
-            <nav id="menu-navegacion" class="navbar navbar-light menu-pleca navbar-expand-lg">
+            <nav id="menu-navegacion" class="navbar navbar-light encabezado navbar-expand-lg">
                 <div class="container">
                     <!--Logotipo del sitio-->
                     <a href="#" class="navbar-brand">
                         <img src="images/svg/reduite-logotipo.svg" alt="Logotipo reduite" class="img-fluid logo">
+                        
                     </a>
                     <!--Botóm del menu movil-->
                     <button type="button" class="navbar-toggler d-lg-none" data-toggle="collapse"
@@ -52,9 +55,10 @@
                             <li class="nav-item pt-4 pt-lg-0"><a href="#inicio" class="nav-link active">inicio</a></li>
                             <li class="nav-item"><a href="#que-es-reduite" class="nav-link">¿qué es reduite?</a></li>
                             <li class="nav-item"><a href="#contacto" class="nav-link">contacto</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link border-bottom-0"><img src="images/svg/telefono-menu.svg" alt="telefono" class="img-fluid tel"></a></li>
-                            <li class="nav-item"><a href="#" class="nav-link mr-0 ml-4 px-0"><img src="images/svg/facebook.svg" alt="facebook" class="img-fluid face"></a></li>
-                            <li class="nav-item"><a href="#" class="nav-link mr-0 ml-3 px-0"><img src="images/svg/instagram.svg" alt="instagram" class="img-fluid insta"></a></li>
+                            <li class="nav-item"><a href="#" class="nav-link border-bottom-0 no-disponible"><img src="images/svg/telefono-menu.svg" alt="telefono" class="img-fluid tel"></a></li>
+                            <li class="nav-item"><a href="#" class="nav-link mr-0 ml-4 px-0"><img src="images/svg/facebook.svg" alt="facebook"
+                                        class="img-fluid redes face"></a></li>
+                            <li class="nav-item"><a href="#" class="nav-link mr-0 ml-3 px-0"><img src="images/svg/instagram.svg" alt="instagram" class="img-fluid redes insta"></a></li>
                         </ul>
                     </div><!-- /.navbar-collapse-->
                 </div><!-- /.container-->
@@ -88,32 +92,37 @@
             <div class="row no-gutters text-center justify-content-center">
                 <div class="col-12 col-md-4">
                     <img src="images/que-es-reduite-01.jpg" alt="que-es-reduite-01" class="img-fluid">
+                     <p class="titulo-Regular d-none d-md-block mt-md-5 mr-md-4 text-md-left">Nuestra misión es ofrecerte una solución real para
+                         llegar
+                         a tu meta y
+                         mejorar tu salud.</p>
                 </div>
                 <div class="col-12 col-md-4 d-none d-md-block">
                     <img src="images/que-es-reduite-02.jpg" alt="que-es-reduite-02" class="img-fluid">
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 text-md-left pl-md-4 mt-md-4 mt-lg-5">
                     <h1 class="titulo-ExtraBold my-5">¿Qué es reduite?</h1>
                     <p class="titulo-Regular">Somos una clínica de nutrición especializada en reducción de peso.</p>
-                    <p class="titulo-Regular mb-5">Por medio de atención personalizada, nuestro nutriólogo experto
+                    <p class="titulo-Regular mb-5 mb-lg-0">Por medio de atención personalizada, nuestro nutriólogo experto
                         atenderá
                         tu caso para ayudarte a llegar a tu peso ideal.</p>
-                </div>
-                <div class="col-12">
-                    <img src="images/que-es-reduite-03.jpg" alt="que-es-reduite-03" class="img-fluid">
-                </div>
-                <div class="col-12 col-md-4">
-                    <p class="titulo-Regular my-5">Nuestra misión es ofrecerte una solución real para llegar a tu meta y
+                </div> 
+                <div class="col-12 col-md-4 order-1 order-md-0 text-md-left pr-md-4">
+                    <p class="titulo-Regular my-5 d-md-none">Nuestra misión es ofrecerte una solución real para llegar a tu meta y
                         mejorar tu salud.</p>
                     <p class="titulo-ExtraBold">¡Logra tus objetivos!</p>
                     <p class="titulo-ExtraBold">Únete al reto de la dieta KETO, también conocida como dieta cetogénica,
                         la cual es muy baja en carbohidratos.</p>
                 </div>
+                <div class="col-12 col-md-8 order-md-1">
+                    <img src="images/que-es-reduite-03.jpg" alt="que-es-reduite-03" class="img-fluid">
+                </div>     
+                
             </div><!-- .row-->
         </div><!-- /.container-->
-        <div class="container-fluid blanco text-center my-5">
+        <div class="container-fluid blanco text-center my-5 my-lg-0">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 col-lg-8 d-lg-none">
                     <h3 class="titulo-ExtraBold py-5">Nuestros servicios</h3>
                     <div class="servicios">
                         <div>
@@ -144,9 +153,9 @@
     ======================================-->
     <footer id="contacto" class="pt-5 text-center">
         <div class="container pt-5">
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="titulo-Regular mb-lg-0">Convierte tu cuerpo en una máquina de quemar grasa.</h3>
+            <div class="row pt-lg-5">
+                <div class="col-12 pt-lg-5">
+                    <h3 class="titulo-Regular">Convierte tu cuerpo en una máquina de quemar grasa.</h3>
                     <p class="titulo-ExtraBold ">Agenda tu cita con nuestro especialista</p>
                     <form action="" id="mi-formulario"></form>
                     <!-- Campo #nombre -->
@@ -202,6 +211,8 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- CARGA DE SLICK PARA EL CARROUSEL DE LOS SERVICIOS-->
     <script src="js/slick.min.js"></script>
+    <!-- Carga de wow.min.js | Inicia las animaciones con animate.css-->
+    <script src="js/wow.min.js"></script>
     <!-- Carga de scripts.js | Inicia las funiones de los scripts -->
     <script src="js/scritps.js"></script>
-</body>
+</body> 
