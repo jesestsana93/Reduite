@@ -12,9 +12,7 @@
   font-family: "Muli Light";
   src: url("../fonts/Muli-Light.ttf"); }
 html {
-  font-size: 14px;
-  scroll-behavior: smooth;
-  /*comportamiento del scroll*/ }
+  font-size: 14px; }
 
 /*------------------------------
 2. ESTILOS GENERALES

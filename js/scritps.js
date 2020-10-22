@@ -39,7 +39,7 @@ $(function () {
     $('.servicios').slick({
         dots: false,
         infinite: true,
-        speed: 800,
+        speed: 1000,
         arrows: false,
         slidesToShow: 8,
         slidesToScroll: 1,
@@ -81,8 +81,16 @@ $(function () {
         ]
     });
 
+    /*-----------------------------------------------------
+    3. INICIANDO "page-scroll-to-id"
+    -------------------------------------------------------*/
+    $('#menu-principal a').mPageScroll2id({
+        offset: 30,
+        highlightClass: 'active'
+    });
+
     /*------------------------------------------------------------
-    3. INICIANDO WOW.js para las animaciones en la página
+    4. INICIANDO WOW.js para las animaciones en la página
     --------------------------------------------------------------*/
     new WOW().init();
 
