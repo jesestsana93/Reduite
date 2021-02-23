@@ -18,23 +18,32 @@ $(function () {
 
     /*-----------------------------------------
     2. CABECERA ANIMADA QUE CAMBIA DE COLOR
-   --------------------------------------------
-    $(window).scroll(function () {
-
-        var windowHeight = $(window).height(); //altura de la ventana
-
-        var nav = $('.encabezado');
-        var scroll = $(window).scrollTop();
-        if (scroll >= windowHeight) {
-            nav.addClass("fondo-menu");
-        } else{
-            nav.removeClass("fondo-menu");
-        }
+   --------------------------------------------*/
+    $(function (){
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > $("#que-es-reduite").offset().top) {
+                $('.encabezado').css('background','url(../images/svg/menu-pleca-negro-01.svg)');
+                $('.navbar-light .navbar-nav .nav-link').css('background','#1E1E1E');
+                $('.navbar-light .navbar-nav .nav-link').css('color','#8DFFF4');
+                $('.navbar-light .navbar-nav .nav-link.active').css('color','#ACB3DF');
+                $('#inicio .logo').css('background','url(../images/svg/reduite-logotipo-color.svg)');
+                $('#inicio .logo').css('background-repeat','no-repeat');
+                $('.boton-menu').css('color','#8DFFF4');
+            } else {
+                $('.encabezado').css('background','url(../images/svg/menu-pleca.svg)');
+                $('.navbar-light .navbar-nav .nav-link').css('background','url(../images/menu-mobile.jpg)');
+                $('.navbar-light .navbar-nav .nav-link').css('color','#848484');
+                $('.navbar-light .navbar-nav .nav-link.active').css('color','#242D63');
+                $('#inicio .logo').css('background','url(../images/svg/reduite-logotipo.svg)');
+                $('#inicio .logo').css('background-repeat','no-repeat');
+                $('.boton-menu').css('color','#000');
+            }
+        });
     });
-   */
+   
 
     /*-----------------------------------------------------------------------
-    2. CONFIGURACION DE SLICK PARA LA PARTE DE ALGUNOS DE NUESTROS CLIENTES
+    3. CONFIGURACION DE SLICK PARA LA PARTE DE ALGUNOS DE NUESTROS CLIENTES
     -------------------------------------------------------------------------*/
     $('.servicios').slick({
         dots: false,
@@ -82,15 +91,15 @@ $(function () {
     });
 
     /*-----------------------------------------------------
-    3. INICIANDO "page-scroll-to-id"
+    4. INICIANDO "page-scroll-to-id"
     -------------------------------------------------------*/
     $('#menu-principal a').mPageScroll2id({
-        offset: 30,
+        offset: 0,
         highlightClass: 'active'
     });
 
     /*------------------------------------------------------------
-    4. INICIANDO WOW.js para las animaciones en la página
+    5. INICIANDO WOW.js para las animaciones en la página
     --------------------------------------------------------------*/
     new WOW().init();
 
