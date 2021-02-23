@@ -115,26 +115,33 @@ html {
   /* line 125, estilos.scss */
   #inicio .encabezado {
     background: url(../images/svg/menu-pleca.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
     -webkit-transition: all .5s ease;
     transition: all .5s ease; }
-  /* line 133, estilos.scss */
+  /* line 130, estilos.scss */
+  #inicio .encabezado-color {
+    background: url(../images/svg/menu-pleca-negro-01.svg); }
+  /* line 135, estilos.scss */
+  #inicio .encabezado,
+  #inicio .encabezado-color {
+    background-size: cover;
+    background-repeat: no-repeat; }
+  /* line 142, estilos.scss */
   #inicio .logo {
-    background: url(../images/svg/reduite-logotipo.svg);
+    background: url(../images/svg/reduite-logotipo.svg); }
+  /* line 146, estilos.scss */
+  #inicio .logo-color {
+    background: url(../images/svg/reduite-logotipo-color.svg); }
+  /* line 150, estilos.scss */
+  #inicio .logo,
+  #inicio .logo-color {
     background-repeat: no-repeat;
     width: 15rem;
     height: 4rem;
     margin-top: 1rem; }
-  /* line 141, estilos.scss */
-  #inicio .fondo-menu {
-    background: url(../images/svg/menu-pleca-negro-01.svg);
-    background-size: cover;
-    background-repeat: no-repeat; }
-  /* line 147, estilos.scss */
+  /* line 158, estilos.scss */
   #inicio .navbar-light .navbar-toggler {
     border-color: transparent; }
-  /* line 151, estilos.scss */
+  /* line 162, estilos.scss */
   #inicio .navbar-light .navbar-nav .nav-link {
     background: url(../images/menu-mobile.jpg);
     background-size: cover;
@@ -146,45 +153,45 @@ html {
     border-bottom: 3px solid white;
     -webkit-transition: all .5s ease;
     transition: all .5s ease; }
-    /* line 162, estilos.scss */
+    /* line 173, estilos.scss */
     #inicio .navbar-light .navbar-nav .nav-link.no-disponible {
       pointer-events: none; }
-    /* line 166, estilos.scss */
+    /* line 177, estilos.scss */
     #inicio .navbar-light .navbar-nav .nav-link .tel {
       width: 15rem; }
-    /* line 170, estilos.scss */
+    /* line 181, estilos.scss */
     #inicio .navbar-light .navbar-nav .nav-link .fab {
       color: #242D63;
       font-size: 2rem;
       -webkit-transition: all .5s ease;
       transition: all .5s ease; }
-      /* line 174, estilos.scss */
+      /* line 185, estilos.scss */
       #inicio .navbar-light .navbar-nav .nav-link .fab:hover {
         -webkit-transform: scale(1.4);
                 transform: scale(1.4); }
-    /* line 179, estilos.scss */
+    /* line 190, estilos.scss */
     #inicio .navbar-light .navbar-nav .nav-link.active {
       color: #242D63;
       font-family: "Muli ExtraBold"; }
-  /* line 186, estilos.scss */
+  /* line 200, estilos.scss */
   #inicio .boton-menu {
     color: #1E1E1E; }
-    /* line 188, estilos.scss */
+    /* line 202, estilos.scss */
     #inicio .boton-menu:before {
       content: "\f0c9";
       font-family: 'Font Awesome 5 Free';
       font-weight: 900;
       font-size: 1.5rem; }
-      /* line 195, estilos.scss */
+      /* line 209, estilos.scss */
       #inicio .boton-menu:before:focus, #inicio .boton-menu:before:active {
         outline: none; }
-  /* line 203, estilos.scss */
+  /* line 217, estilos.scss */
   #inicio .icono-cerrar:before {
     content: "\f00d";
     position: relative;
     left: .2rem;
     font-size: 1.5rem; }
-  /* line 211, estilos.scss */
+  /* line 225, estilos.scss */
   #inicio .texto-encabezado {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -195,10 +202,10 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    /* line 216, estilos.scss */
+    /* line 230, estilos.scss */
     #inicio .texto-encabezado .container {
       padding: 3rem 2rem 0 2rem; }
-  /* line 221, estilos.scss */
+  /* line 235, estilos.scss */
   #inicio .scroll {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -206,7 +213,7 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    /* line 225, estilos.scss */
+    /* line 239, estilos.scss */
     #inicio .scroll a {
       width: 2.5rem;
       margin: 1rem 0 3rem 0;
@@ -235,25 +242,25 @@ html {
 /*------------------------------
 4. QUE ES REDUITE
 --------------------------------*/
-/* line 252, estilos.scss */
+/* line 266, estilos.scss */
 #que-es-reduite {
   background-color: #1E1E1E; }
-  /* line 255, estilos.scss */
+  /* line 269, estilos.scss */
   #que-es-reduite h1,
   #que-es-reduite p {
     color: #ACB3DF; }
-  /* line 260, estilos.scss */
+  /* line 274, estilos.scss */
   #que-es-reduite .blanco {
     background-color: white;
     color: #242D63; }
-  /* line 267, estilos.scss */
+  /* line 281, estilos.scss */
   #que-es-reduite .servicios img {
     width: 12rem;
     margin: 0 auto; }
-  /* line 272, estilos.scss */
+  /* line 286, estilos.scss */
   #que-es-reduite .servicios .tam {
     width: 9rem !important; }
-  /* line 276, estilos.scss */
+  /* line 290, estilos.scss */
   #que-es-reduite .slick-slider {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -261,7 +268,7 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  /* line 281, estilos.scss */
+  /* line 295, estilos.scss */
   #que-es-reduite .slick-prev:before,
   #que-es-reduite .slick-next:before {
     content: "\f053";
@@ -270,36 +277,36 @@ html {
     color: #242D63;
     font-size: 4rem;
     float: right; }
-  /* line 290, estilos.scss */
+  /* line 304, estilos.scss */
   #que-es-reduite button {
     border: none;
     background: transparent; }
-  /* line 294, estilos.scss */
+  /* line 308, estilos.scss */
   #que-es-reduite .slick-next:before {
     content: "\f054"; }
 
 /*------------------------------
 5. CONTACTO
 --------------------------------*/
-/* line 302, estilos.scss */
+/* line 316, estilos.scss */
 #contacto {
   background-image: url(../images/unete-al-reto-mobile.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   height: auto; }
-  /* line 309, estilos.scss */
+  /* line 323, estilos.scss */
   #contacto .form-control {
     background-color: rgba(255, 255, 255, 0.6);
     color: black;
     border: 1px solid #4D4D4D;
     border-radius: unset; }
-    /* line 315, estilos.scss */
+    /* line 329, estilos.scss */
     #contacto .form-control:focus {
       -webkit-box-shadow: 0 0 transparent;
               box-shadow: 0 0 transparent;
       outline: #4D4D4D; }
-  /* line 321, estilos.scss */
+  /* line 335, estilos.scss */
   #contacto ::-webkit-input-placeholder {
     font-family: "Muli Light" !important;
     color: black;
@@ -320,11 +327,11 @@ html {
     color: black;
     padding: .3rem .2rem;
     font-size: 1rem; }
-  /* line 328, estilos.scss */
+  /* line 342, estilos.scss */
   #contacto input[type=text],
   #contacto input[type=email] {
     color: black; }
-  /* line 335, estilos.scss */
+  /* line 349, estilos.scss */
   #contacto .direccion span {
     font-size: 1.3rem;
     color: #4D4D4D; }
@@ -333,64 +340,64 @@ html {
 X. Show de las Medias Queries
 ============================================= */
 @media (min-width: 320px) {
-  /* line 346, estilos.scss */
+  /* line 360, estilos.scss */
   #inicio {
     /*Boton del menu */ }
-    /* line 347, estilos.scss */
+    /* line 361, estilos.scss */
     #inicio .menu-pleca {
       /*Estilos para el logotipo*/ }
-      /* line 350, estilos.scss */
+      /* line 364, estilos.scss */
       #inicio .menu-pleca .logo {
         width: 16rem;
         height: 6rem;
         margin-left: .4rem; }
-    /* line 358, estilos.scss */
+    /* line 372, estilos.scss */
     #inicio .boton-menu:before,
     #inicio .icono-cerrar:before {
       font-size: 2rem; } }
 @media (min-width: 400px) {
-  /* line 366, estilos.scss */
+  /* line 380, estilos.scss */
   #inicio {
     /*Boton del menu */ }
-    /* line 367, estilos.scss */
+    /* line 381, estilos.scss */
     #inicio .menu-pleca {
       /*Estilos para el logotipo*/ }
-      /* line 370, estilos.scss */
+      /* line 384, estilos.scss */
       #inicio .menu-pleca .logo {
         width: 21rem;
         height: 5rem;
         margin-left: 1rem; }
-    /* line 378, estilos.scss */
+    /* line 392, estilos.scss */
     #inicio .boton-menu:before,
     #inicio .icono-cerrar:before {
       font-size: 2rem; } }
 /* --------------Vista sm ------------- */
 @media (min-width: 576px) {
   /*Estilo general del boton*/
-  /* line 389, estilos.scss */
+  /* line 403, estilos.scss */
   .btn {
     width: auto;
     padding: .4rem 1rem;
     font-size: 1rem;
     margin-top: 0rem; }
 
-  /* line 396, estilos.scss */
+  /* line 410, estilos.scss */
   #inicio {
     background-image: url(../images/logra-tus-objetivos-desktop.jpg);
     /*Boton del menu */ }
-    /* line 399, estilos.scss */
+    /* line 413, estilos.scss */
     #inicio .menu-pleca {
       /*Estilos para el logotipo*/ }
-      /* line 402, estilos.scss */
+      /* line 416, estilos.scss */
       #inicio .menu-pleca .logo {
         width: 26rem;
         height: 8rem;
         margin-left: 2rem; }
-    /* line 410, estilos.scss */
+    /* line 424, estilos.scss */
     #inicio .boton-menu:before,
     #inicio .icono-cerrar:before {
       font-size: 3rem; }
-    /* line 415, estilos.scss */
+    /* line 429, estilos.scss */
     #inicio .texto-encabezado .container {
       padding: 0;
       display: -webkit-box;
@@ -401,36 +408,36 @@ X. Show de las Medias Queries
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; }
-    /* line 424, estilos.scss */
+    /* line 438, estilos.scss */
     #inicio .texto-encabezado h1,
     #inicio .texto-encabezado h2 {
       color: #4D4D4D; }
 
-  /* line 434, estilos.scss */
+  /* line 448, estilos.scss */
   #contacto .direccion p,
   #contacto .direccion span {
     font-size: 1rem; } }
 /* --------------Vista Md ------------- */
 @media (min-width: 768px) {
-  /* line 445, estilos.scss */
+  /* line 459, estilos.scss */
   html {
     font-size: 16px; }
 
-  /* line 452, estilos.scss */
+  /* line 466, estilos.scss */
   #inicio .texto-encabezado h1,
   #inicio .texto-encabezado h2 {
     font-size: 1.4rem; }
-  /* line 458, estilos.scss */
+  /* line 472, estilos.scss */
   #inicio .scroll a {
     width: 2rem; }
 
-  /* line 465, estilos.scss */
+  /* line 479, estilos.scss */
   #que-es-reduite h1,
   #que-es-reduite h3,
   #que-es-reduite p {
     font-size: 1.2rem; }
 
-  /* line 473, estilos.scss */
+  /* line 487, estilos.scss */
   #contacto .form-group {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -438,77 +445,77 @@ X. Show de las Medias Queries
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  /* line 480, estilos.scss */
+  /* line 494, estilos.scss */
   #contacto .direccion p {
     line-height: 1; }
-  /* line 484, estilos.scss */
+  /* line 498, estilos.scss */
   #contacto .direccion p,
   #contacto .direccion span {
     font-size: .8rem; } }
 /* --------------Vista Lg ------------- */
 @media (min-width: 992px) {
-  /* line 496, estilos.scss */
+  /* line 510, estilos.scss */
   #inicio .navbar {
     padding: 0; }
-  /* line 500, estilos.scss */
+  /* line 514, estilos.scss */
   #inicio .menu-pleca .logo {
     width: 15rem;
     height: 6rem;
     margin-left: 0; }
-  /* line 506, estilos.scss */
+  /* line 520, estilos.scss */
   #inicio .scroll a {
     margin: 1rem 0 4rem 0; }
-  /* line 510, estilos.scss */
+  /* line 524, estilos.scss */
   #inicio .navbar-light .navbar-nav .nav-link {
     background: transparent !important;
     border-bottom: 0;
     font-size: .8rem;
     padding: 0 1.1rem;
     font-family: "Muli Light"; }
-    /* line 517, estilos.scss */
+    /* line 531, estilos.scss */
     #inicio .navbar-light .navbar-nav .nav-link .tel {
       width: 8rem; }
-    /* line 521, estilos.scss */
+    /* line 535, estilos.scss */
     #inicio .navbar-light .navbar-nav .nav-link .fab {
       font-size: 1rem; }
 
-  /* line 529, estilos.scss */
+  /* line 543, estilos.scss */
   #que-es-reduite h1,
   #que-es-reduite h3,
   #que-es-reduite p {
     font-size: 1.7rem; }
 
-  /* line 536, estilos.scss */
+  /* line 550, estilos.scss */
   #contacto {
     background-image: url(../images/unete-al-reto-desktop.jpg); }
-    /* line 539, estilos.scss */
+    /* line 553, estilos.scss */
     #contacto h3,
     #contacto p {
       color: #4D4D4D;
       font-size: 1.5rem; } }
 /* --------------Vista Xl ------------- */
 @media (min-width: 1200px) {
-  /* line 549, estilos.scss */
+  /* line 563, estilos.scss */
   html {
     font-size: 18px; }
 
-  /* line 556, estilos.scss */
+  /* line 570, estilos.scss */
   #inicio .texto-encabezado h1,
   #inicio .texto-encabezado h2 {
     font-size: 1.2rem;
     line-height: 1; }
-  /* line 564, estilos.scss */
+  /* line 578, estilos.scss */
   #inicio .scroll a {
     width: 1.6rem;
     margin: 1rem 0 2.5rem 0; }
 
-  /* line 572, estilos.scss */
+  /* line 586, estilos.scss */
   #que-es-reduite h1,
   #que-es-reduite h3,
   #que-es-reduite p {
     font-size: 1.4rem; }
 
-  /* line 582, estilos.scss */
+  /* line 596, estilos.scss */
   #contacto .direccion p,
   #contacto .direccion span {
     font-size: .7rem; } }

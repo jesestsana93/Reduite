@@ -22,24 +22,23 @@ $(function () {
     $(function (){
         $(window).scroll(function () {
             var nav = $('.encabezado');
+            var logotipo = $('.logo');
 
             if ($(this).scrollTop() > $("#que-es-reduite").offset().top) {
-                nav.addClass("fondo-menu");
+                nav.addClass("encabezado-color");
                 $('.navbar-light .navbar-nav .nav-link').css('background','#1E1E1E');
                 $('.navbar-light .navbar-nav .nav-link').css('color','#8DFFF4');
                 $('.navbar-light .navbar-nav .nav-link.active').css('color','#ACB3DF');
-                $('#inicio .logo').css('background','url(../images/svg/reduite-logotipo-color.svg)');
+                logotipo.addClass("logo-color");
                 $('.fab').css('color','#8DFFF4');
-                $('#inicio .logo').css('background-repeat','no-repeat');
                 $('.boton-menu').css('color','#8DFFF4');
             } else {
-                nav.removeClass("fondo-menu");
-                $('.navbar-light .navbar-nav .nav-link').css('background','url(../images/menu-mobile.jpg)');
+                nav.removeClass("encabezado-color");
+                $('.navbar-light .navbar-nav .nav-link').css('background','#8DFFF4');
                 $('.navbar-light .navbar-nav .nav-link').css('color','#848484');
                 $('.navbar-light .navbar-nav .nav-link.active').css('color','#242D63');
-                $('#inicio .logo').css('background','url(../images/svg/reduite-logotipo.svg)');
+                logotipo.removeClass("logo-color");
                 $('.fab').css('color','#242D63');
-                $('#inicio .logo').css('background-repeat','no-repeat');
                 $('.boton-menu').css('color','#000');
             }
         });

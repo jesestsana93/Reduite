@@ -124,24 +124,35 @@ $texto-secundario: #4D4D4D;
 
     .encabezado {
         background: url(../images/svg/menu-pleca.svg);
+        transition: all .5s ease;
+    }
+
+    .encabezado-color {
+        background: url(../images/svg/menu-pleca-negro-01.svg);
+       
+    }
+
+    .encabezado,
+    .encabezado-color{
         background-size: cover;
         background-repeat: no-repeat;
-        transition: all .5s ease;
     }
 
     /*Estilos para el logotipo*/
     .logo {
         background: url(../images/svg/reduite-logotipo.svg);
+    }
+
+    .logo-color {
+        background: url(../images/svg/reduite-logotipo-color.svg);
+    }
+
+    .logo,
+    .logo-color{
         background-repeat: no-repeat;
         width: 15rem;
         height: 4rem;
-        margin-top: 1rem;        
-    }
-
-    .fondo-menu {
-        background: url(../images/svg/menu-pleca-negro-01.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
+        margin-top: 1rem; 
     }
 
     .navbar-light .navbar-toggler {
@@ -179,8 +190,11 @@ $texto-secundario: #4D4D4D;
         &.active {
             color: $secundario;
             font-family: "Muli ExtraBold";
-        }        
+        }    
+        
     }
+
+    
 
     /*Boton del menu */
     .boton-menu{
