@@ -21,20 +21,24 @@ $(function () {
    --------------------------------------------*/
     $(function (){
         $(window).scroll(function () {
+            var nav = $('.encabezado');
+
             if ($(this).scrollTop() > $("#que-es-reduite").offset().top) {
-                $('.encabezado').css('background','url(../images/svg/menu-pleca-negro-01.svg)');
+                nav.addClass("fondo-menu");
                 $('.navbar-light .navbar-nav .nav-link').css('background','#1E1E1E');
                 $('.navbar-light .navbar-nav .nav-link').css('color','#8DFFF4');
                 $('.navbar-light .navbar-nav .nav-link.active').css('color','#ACB3DF');
                 $('#inicio .logo').css('background','url(../images/svg/reduite-logotipo-color.svg)');
+                $('.fab').css('color','#8DFFF4');
                 $('#inicio .logo').css('background-repeat','no-repeat');
                 $('.boton-menu').css('color','#8DFFF4');
             } else {
-                $('.encabezado').css('background','url(../images/svg/menu-pleca.svg)');
+                nav.removeClass("fondo-menu");
                 $('.navbar-light .navbar-nav .nav-link').css('background','url(../images/menu-mobile.jpg)');
                 $('.navbar-light .navbar-nav .nav-link').css('color','#848484');
                 $('.navbar-light .navbar-nav .nav-link.active').css('color','#242D63');
                 $('#inicio .logo').css('background','url(../images/svg/reduite-logotipo.svg)');
+                $('.fab').css('color','#242D63');
                 $('#inicio .logo').css('background-repeat','no-repeat');
                 $('.boton-menu').css('color','#000');
             }

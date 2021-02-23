@@ -138,6 +138,12 @@ $texto-secundario: #4D4D4D;
         margin-top: 1rem;        
     }
 
+    .fondo-menu {
+        background: url(../images/svg/menu-pleca-negro-01.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
     .navbar-light .navbar-toggler {
         border-color: transparent;
     }
@@ -161,27 +167,19 @@ $texto-secundario: #4D4D4D;
             width: 15rem;
         }
 
-        .face {
-            width: 1.2rem;
-        }
-
-        .insta {
-            width: 2rem;
-        }
-
-        .face,
-        .insta {
+        .fab {
+            color: $secundario;
+            font-size: 2rem;
             transition: all .5s ease;
             &:hover {
                 transform: scale(1.4);
             }
         }
 
-
         &.active {
             color: $secundario;
             font-family: "Muli ExtraBold";
-        }
+        }        
     }
 
     /*Boton del menu */
@@ -520,16 +518,8 @@ X. Show de las Medias Queries
                 width: 8rem;
             }
 
-            .face {
-                width: .6rem;
-                padding: 0;
-                margin: 0;
-            }
-
-            .insta {
-                width: .84rem;
-                padding: 0;
-                margin: 0;
+            .fab{
+                font-size: 1rem;
             }
         }
     }
